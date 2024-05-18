@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_Add2Ints_Test" Id="{49f8a845-3490-41a2-8b1b-cccc46e022b3}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_Add2Ints_Test EXTENDS TcUnit.FB_TestSuite
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="Add5Plus10Expect15" Id="{aec43e7c-b34f-48eb-8ba5-7cdb06611da3}">
+      <Declaration><![CDATA[METHOD PRIVATE Add5Plus10Expect15 
+VAR
+	fbAdd	: FB_Add2Ints;
+	result	: INT;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[TEST('Add5Plus10Expect15');
+fbAdd(Int1 := 5, Int2 := 10, Result => result);
+	
+AssertEquals_Int(Expected := 15, Actual := result, Message :='Didnt work');
+AssertFalse(Condition := TRUE, Message := 'should fail');	
+
+TEST_FINISHED();]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>

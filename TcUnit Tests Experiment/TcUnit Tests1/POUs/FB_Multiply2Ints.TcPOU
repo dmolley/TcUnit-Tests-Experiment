@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_Multiply2Ints" Id="{39965b16-741e-4a23-bd9e-5ff20d8c9780}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_Multiply2Ints
+VAR_INPUT
+	Int1	: INT;
+	Int2	: INT;
+END_VAR
+VAR_OUTPUT
+	Result	: INT;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[Result := Int1 * Int2;
+]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

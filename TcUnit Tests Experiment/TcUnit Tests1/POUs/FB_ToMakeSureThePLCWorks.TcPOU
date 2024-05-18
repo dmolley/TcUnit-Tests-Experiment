@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_ToMakeSureThePLCWorks" Id="{dcf0bc4a-7d51-4eb7-8c5e-c1d67a338667}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_ToMakeSureThePLCWorks
+
+VAR
+	fbMult	: FB_Multiply2Ints;
+	result	: INT;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[fbMult(Int1 := 2, Int2 := 15, Result => result);
+]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

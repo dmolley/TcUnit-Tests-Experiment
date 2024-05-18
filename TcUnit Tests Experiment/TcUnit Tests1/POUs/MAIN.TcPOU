@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="MAIN" Id="{bb85cb04-9520-48d9-a2c2-2bc40cfa1f57}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+//	fbtest1 : FB_ToMakeSureThePLCWorks;
+	fbAdd2Ints_Test : FB_Add2Ints_Test;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[TcUnit.RUN();
+
+]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>
